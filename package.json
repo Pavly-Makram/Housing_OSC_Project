@@ -2,10 +2,10 @@
   "name": "housing_osc_project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "tsx src/server.ts",
     "dev": "nodemon --exec tsx src/server.ts"
   },
   "repository": {
@@ -16,10 +16,6 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/Pavly-Makram/Housing_OSC_Project/issues"
-  },
-  "homepage": "https://github.com/Pavly-Makram/Housing_OSC_Project#readme",
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "cookie-parser": "^1.4.7",
@@ -28,7 +24,8 @@
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.9.3",
     "swagger-jsdoc": "^6.3.0",
-    "swagger-ui-express": "^5.0.1"
+    "swagger-ui-express": "^5.0.1",
+    "tsx": "^4.23.12"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
@@ -38,7 +35,6 @@
     "@types/node": "^26.2.0",
     "@types/swagger-jsdoc": "^6.0.4",
     "@types/swagger-ui-express": "^4.1.8",
-    "tsx": "^4.23.12",
     "typescript": "^7.0.2"
   }
 }

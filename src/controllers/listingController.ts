@@ -1,6 +1,5 @@
 import { Request, Response } from 'express';
 import { Listing } from '../models/Listing';
-import { User } from '../models/User';
 import { Types } from 'mongoose';
 
 
@@ -20,7 +19,6 @@ export const createListing = async (req: Request, res: Response): Promise<void> 
       return;
     }
 
-    // 2. التحقق من الحقول الإجبارية
     if (!location || price === undefined || !roomsAvailable || !description) {
       res.status(400).json({ message: 'All fields are required' });
       return;
@@ -31,7 +29,6 @@ export const createListing = async (req: Request, res: Response): Promise<void> 
       return;
     }
 
-    // 3. إنشاء الإعلان (استخدمنا new Types.ObjectId للتأكيد على الـ Type)
     const newListing = await Listing.create({
       location,
       price: Number(price),
