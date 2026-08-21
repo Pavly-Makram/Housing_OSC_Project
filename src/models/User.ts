@@ -22,7 +22,6 @@ const userSchema = new Schema<IUser>(
       required: [true, 'Email is required'],
       unique: true,
       trim: true,
-      lowercase: true,
     },
     password: {
       type: String,
